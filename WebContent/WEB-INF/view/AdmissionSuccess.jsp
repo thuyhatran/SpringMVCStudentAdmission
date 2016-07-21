@@ -7,6 +7,7 @@
 <title>AdmissionSuccess</title>
 </head>
 <body>
+<h1>${mess}</h1>
 	<table>
 		<tr>
 			<td>Student Name: </td>

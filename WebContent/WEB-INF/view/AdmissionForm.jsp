@@ -7,8 +7,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
 </head>
+
 <body>
-	
+	<h1>${mess}</h1>
 	
 	<%-- <form  method="post"  action="/SpringMVCStudentAdmission/submitAdmissionForm.html">
 		Student's Name: <input type = "text" name="studentName" /> <br>

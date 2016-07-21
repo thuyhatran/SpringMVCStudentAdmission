@@ -1,6 +1,7 @@
 package com.mc.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,6 +19,11 @@ public class StudentAdmissionController {
 		return model;
 	}
 	
+	
+	@ModelAttribute
+	public void welcomeMessage(Model model){  //this "mess" value can use in both form
+		model.addAttribute("mess", "Welcome to Spring MVC");
+	}
 	
 	
 //	@RequestMapping(value="/submitAdmissionForm.html", method=RequestMethod.POST)
