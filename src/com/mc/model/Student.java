@@ -10,6 +10,8 @@ public class Student {
 	private Date birthday;
 	private ArrayList<String> skills;
 	
+	private Address address;
+	
 	public Student(){
 		
 	}
@@ -62,6 +64,18 @@ public class Student {
 
 	public void setSkills(ArrayList<String> skills) {
 		this.skills = skills;
+	}
+
+		
+	
+
+	public Address getAddress() {
+		return address;
+	}
+
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 

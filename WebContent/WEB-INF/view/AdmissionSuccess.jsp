@@ -33,7 +33,10 @@
 			<td>Student Skills: </td>
 			<td>${student.skills}</td>
 		</tr>
-		
+		<tr>
+			<td>Student Address: </td>
+			<td>${student.address.street}, ${student.address.city}, ${student.address.country},  ${student.address.pincode}</td>
+		</tr>
 	
 	</table>
 

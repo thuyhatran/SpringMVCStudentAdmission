@@ -12,11 +12,12 @@
 	<h1>${mess}</h1>
 	
 	<form  method="post"  action="/SpringMVCStudentAdmission/submitAdmissionForm.html">
+			
 		Student's Name: <input type = "text" name="name" /> <br>  <%-- name and hobby should be the same in Student class --%>
 		Student's Hobby: <input type = "text" name="hobby"/> <br>
 		Student's Birthday: <input type = "text" name="birthday"/> <br>
 		Student's Mobile: <input type = "text" name="mobile"/> <br>
-		Student's Skills: <select name="skills" multiple ><br>
+		Student's Skills: <select name="skills" multiple >
 								<option value ="Java Core">Java Core</option>
 								<option value="SQL">SQL</option>
 								<option value="SpringMVC">SpringMVC</option>
@@ -24,6 +25,13 @@
 							</select>
 		
 		<br>
+		
+		Address country: <input type ="text" name="address.country">
+		City: <input type ="text" name="address.city">
+		Street: <input type ="text" name="address.street">
+		Pin Code: <input type ="text" name="address.pincode">
+		
+		
 		<input type="submit" value="Submit" />
 	
 	</form>
