@@ -1,6 +1,7 @@
 package com.mc.model;
 
 public class Address {
+	
 	private String country, city, street;
 	private int pincode;
 	

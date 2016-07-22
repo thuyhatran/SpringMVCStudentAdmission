@@ -25,28 +25,15 @@ public class StudentAdmissionController {
 		model.addAttribute("mess", "Welcome to Spring MVC");
 	}
 	
-	
-//	@RequestMapping(value="/submitAdmissionForm.html", method=RequestMethod.POST)
-//	public ModelAndView submitAdmissionForm(@RequestParam("studentName") String student_name, @RequestParam("studentHobby") String student_hobby){
-//		// studentName, studentHobby are the same to the ones in AsmissionForm.jsp
-//		Student student1 = new Student();
-//		student1.setName(student_name);
-//		student1.setHobby(student_hobby);
-//		
-//		System.out.println("student 1:   " + student1);
-//		
-//		ModelAndView model = new ModelAndView("AdmissionSuccess");
-//		model.addObject("headerMessage","MT College");
-//		model.addObject("student",student1);
-//		
-//		return model;
-//		
-//	}
-	
+
 	
 	@RequestMapping(value="/submitAdmissionForm.html", method=RequestMethod.POST)
-	public ModelAndView submitAdmissionForm(@ModelAttribute("student") Student student1){
+	public ModelAndView submitAdmissionForm(@ModelAttribute("student") Student student1, BindingResult result){
 		
+		if (result.hasErrors()){
+			ModelAndView model = new ModelAndView("AdmissionForm");  //this is an .jsp file (see viewResolver)
+			return model;
+		}
 		
 		ModelAndView model = new ModelAndView("AdmissionSuccess");  //this is an .jsp file (see viewResolver)
 		model.addObject("headerMessage","MT College");
