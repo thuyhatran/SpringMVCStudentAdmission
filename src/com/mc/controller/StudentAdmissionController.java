@@ -22,10 +22,9 @@ public class StudentAdmissionController {
 	
 	
 	@ModelAttribute
-	public void welcomeMessage(Model model){  //this "mess" value can use in both form
+	public void welcomeMessage(Model model){  //this "mess" value can use in both form AdmissionForm.jsp and AdmissionSuccess.jsp
 		model.addAttribute("mess", "Welcome to Spring MVC");
 	}
-	
 	
 	
 //	@RequestMapping(value="/submitAdmissionForm.html", method=RequestMethod.POST)
@@ -55,5 +54,4 @@ public class StudentAdmissionController {
 		return model;
 	}
 	
-
 }
