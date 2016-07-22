@@ -16,9 +16,24 @@
 		</tr>
 		
 		<tr>
+			<td>Student Birthday: </td>
+			<td>${student.birthday}</td>
+		</tr>
+		
+		<tr>
 			<td>Student Hobby: </td>
 			<td>${student.hobby}</td>
 		</tr>
+		
+		<tr>
+			<td>Student Mobile: </td>
+			<td>${student.mobile}</td>
+		</tr>
+		<tr>
+			<td>Student Skills: </td>
+			<td>${student.skills}</td>
+		</tr>
+		
 	
 	</table>
 

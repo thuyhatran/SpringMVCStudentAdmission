@@ -14,9 +14,21 @@
 	<form  method="post"  action="/SpringMVCStudentAdmission/submitAdmissionForm.html">
 		Student's Name: <input type = "text" name="name" /> <br>  <%-- name and hobby should be the same in Student class --%>
 		Student's Hobby: <input type = "text" name="hobby"/> <br>
+		Student's Birthday: <input type = "text" name="birthday"/> <br>
+		Student's Mobile: <input type = "text" name="mobile"/> <br>
+		Student's Skills: <select name="skills" multiple ><br>
+								<option value ="Java Core">Java Core</option>
+								<option value="SQL">SQL</option>
+								<option value="SpringMVC">SpringMVC</option>
+								
+							</select>
+		
+		<br>
 		<input type="submit" value="Submit" />
 	
 	</form>
+	
+	
 	
 	<%--  <form:form  method="post" modelAttribute="student" action="/SpringMVCStudentAdmission/submitAdmissionForm.html">
 		Student's Name: <form:input  path="name" /> <br>
