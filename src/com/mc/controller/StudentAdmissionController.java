@@ -1,5 +1,7 @@
 package com.mc.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -13,22 +15,22 @@ import com.mc.model.Student;
 
 @Controller
 public class StudentAdmissionController {
+	
+	
+	
 	@RequestMapping(value="/admissionForm.html", method=RequestMethod.GET)
 	public ModelAndView getAdmissionForm(){
 		ModelAndView model = new ModelAndView("AdmissionForm");
 		return model;
 	}
-	
-	
+		
 	@ModelAttribute
 	public void welcomeMessage(Model model){  //this "mess" value can use in both form AdmissionForm.jsp and AdmissionSuccess.jsp
 		model.addAttribute("mess", "Welcome to Spring MVC");
 	}
 	
-
-	
 	@RequestMapping(value="/submitAdmissionForm.html", method=RequestMethod.POST)
-	public ModelAndView submitAdmissionForm(@ModelAttribute("student") Student student1, BindingResult result){
+	public ModelAndView submitAdmissionForm(@Valid @ModelAttribute("student") Student student1, BindingResult result){
 		
 		if (result.hasErrors()){
 			ModelAndView model = new ModelAndView("AdmissionForm");  //this is an .jsp file (see viewResolver)
@@ -40,7 +42,8 @@ public class StudentAdmissionController {
 		//model.addObject("student",student1);
 		
 		return model;
-		
+	
 	}
+	
 	
 }

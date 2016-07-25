@@ -32,6 +32,7 @@
 		City: <input type ="text" name="address.city">
 		Street: <input type ="text" name="address.street">
 		Pin Code: <input type ="text" name="address.pincode">
+		<br>
 		
 		
 		<input type="submit" value="Submit" />
