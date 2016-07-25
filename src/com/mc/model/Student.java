@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import javax.validation.constraints.*;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+
+import com.mc.controller.IsValidHobby;
 
 public class Student {
 	
@@ -13,6 +13,7 @@ public class Student {
 	private String name;
 	
 	@Size(min=2, max=30 /*, message="Hobby size should be between {min} and {max}"*/)  //Form Validation jars required
+	@IsValidHobby 
 	private String hobby;
 	
 	@Max(99999)
