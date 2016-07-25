@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 
 public class Student {
 	
-	@Pattern(regexp="^[0=9]*")
+	@Pattern(regexp="[^0-9]*") 
 	private String name;
 	
 	@Size(min=2, max=30 /*, message="Hobby size should be between {min} and {max}"*/)  //Form Validation jars required
