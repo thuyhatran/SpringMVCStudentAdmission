@@ -11,14 +11,25 @@
 <body>
 	<h1>${mess}</h1>
 	
-	<form:errors path="student.*"/>
+<%-- 	<form:errors path="student.*"/> --%>
+
+	
+	
+	
 	
 	<form  method="post"  action="/SpringMVCStudentAdmission/submitAdmissionForm.html">
 			
-		Student's Name: <input type = "text" name="name" /> <br>  <%-- name and hobby should be the same in Student class --%>
-		Student's Hobby: <input type = "text" name="hobby"/> <br>
-		Student's Birthday: <input type = "text" name="birthday"/> <br>
-		Student's Mobile: <input type = "text" name="mobile"/> <br>
+		Student's Name: <input type = "text" name="name" /> 
+		<form:errors path="student.name"/>
+		<br>  <%-- name and hobby should be the same in Student class --%>
+		Student's Hobby: <input type = "text" name="hobby"/>
+		<form:errors path="student.hobby"/> <br>
+		Student's Birthday: <input type = "text" name="birthday"/> 
+		<form:errors path="student.birthday"/>
+		<br>
+		Student's Mobile: <input type = "text" name="mobile"/>
+		<form:errors path="student.mobile"/> 
+		<br>
 		Student's Skills: <select name="skills" multiple >
 								<option value ="Java Core">Java Core</option>
 								<option value="SQL">SQL</option>

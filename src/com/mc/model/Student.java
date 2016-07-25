@@ -3,17 +3,25 @@ package com.mc.model;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.validation.constraints.*;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 public class Student {
 	
+	@Pattern(regexp="^[0=9]*")
 	private String name;
 	
 	@Size(min=2, max=30 /*, message="Hobby size should be between {min} and {max}"*/)  //Form Validation jars required
 	private String hobby;
+	
+	@Max(99999)
 	private Long mobile;
+	
+	@Past
 	private Date birthday;
 	private ArrayList<String> skills;
+	
 	
 	private Address address;
 	
@@ -21,7 +29,7 @@ public class Student {
 		
 	}
 	
-
+	
 	public Student(String name, String hobby) {
 		
 		this.name = name;
