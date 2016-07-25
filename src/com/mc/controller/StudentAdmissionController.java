@@ -1,7 +1,11 @@
 package com.mc.controller;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.validation.Valid;
 
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,6 +25,11 @@ public class StudentAdmissionController {
 	
 	@InitBinder
 	public void initBinder(WebDataBinder binder) {
+		
+		binder.setDisallowedFields(new String[] {"mobile"});
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");
+		binder.registerCustomEditor(Date.class, "birthday", new CustomDateEditor(dateFormat, false));
+		 
 		binder.registerCustomEditor(String.class, "name", new StudentNameEditor());
 	
 	}
