@@ -9,7 +9,7 @@ public class Student {
 	
 	private String name;
 	
-	@Size(min=2, max=30, message="Hobby size should be between {min} and {max}")//Form Validation jars required
+	@Size(min=2, max=30 /*, message="Hobby size should be between {min} and {max}"*/)  //Form Validation jars required
 	private String hobby;
 	private Long mobile;
 	private Date birthday;
