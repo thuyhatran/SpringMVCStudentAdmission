@@ -26,6 +26,11 @@
  			<mvc:mapping path="/admissionForm.html" />
  			<bean class="com.mc.controller.DayOfWeekInterceptor" />
  		</mvc:interceptor>
+ 		
+ 		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="siteLanguage" />
+		</bean>
+ 		
   	</mvc:interceptors>   
   	  
         
@@ -37,10 +42,10 @@
      
     <bean id="messageSource"
  		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
- 		<property name="basename" value="/WEB-INF/view/student_mess" />
+ 		<property name="basename" value="/WEB-INF/view/student_lang" />
  	</bean>
    
-          
+    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"/>   
           
 
 </beans>
