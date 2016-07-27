@@ -30,6 +30,12 @@
  		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
 			<property name="paramName" value="siteLanguage" />
 		</bean>
+		
+		<!-- Supporting Multiple Themes -->
+		<bean class="org.springframework.web.servlet.theme.ThemeChangeInterceptor">
+			<property name="paramName" value="siteTheme" />
+		</bean>
+		
  		
   	</mvc:interceptors>   
   	  
@@ -40,12 +46,33 @@
           p:suffix=".jsp" />
           
      
+     <mvc:resources location="/WEB-INF/view/" mapping="/resources/**"></mvc:resources>
+     
     <bean id="messageSource"
  		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
  		<property name="basename" value="/WEB-INF/view/student_lang" />
  	</bean>
-   
-    <bean id="localeResolver" class="org.springframework.web.servlet.i18n.CookieLocaleResolver"/>   
+     
+     <bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+		<property name="defaultLocale" value="en" />
+		<property name="cookieName" value="localeCookie" />
+		<property name="cookieMaxAge" value="3600" />
+	</bean>
+     
+     <!-- Supporting Multiple Themes -->
+	<bean id="themeSource"
+		class="org.springframework.ui.context.support.ResourceBundleThemeSource">
+		<property name="basenamePrefix" value="theme-" />
+	</bean>
+
+	<bean id="themeResolver"
+		class="org.springframework.web.servlet.theme.CookieThemeResolver">
+		<property name="defaultThemeName" value="green" />
+	</bean>
+     
+
+    
           
 
 </beans>

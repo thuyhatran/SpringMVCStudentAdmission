@@ -11,11 +11,17 @@
 
 <body>
 
+<link rel="stylesheet" href="<spring:theme code='stylesheet'/>" type="text/css"/>
+
+<p><a href="/SpringMVCStudentAdmission/admissionForm.html?siteTheme=green">Green</a> |
+<a href="/SpringMVCStudentAdmission/admissionForm.html?siteTheme=red">Red</a></p>
+
+
 <a href="/SpringMVCStudentAdmission/admissionForm.html?siteLanguage=en">English</a>|
 <a href="/SpringMVCStudentAdmission/admissionForm.html?siteLanguage=fr">French</a>
 
 
-	<h1>${mess}</h1>
+	<h2>${mess}</h2>
 	
 <%-- 	<form:errors path="student.*"/> --%>
 
@@ -63,7 +69,7 @@
 		<br>
 		
 		<input type="submit" value=<spring:message code="label.submit.admissionForm"/> />
-		<input type="submit" value="Submit" />
+		
 	
 	</form>
 	
