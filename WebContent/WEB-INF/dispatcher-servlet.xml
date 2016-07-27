@@ -20,6 +20,15 @@
    <context:component-scan base-package="com.mc.controller"/>
    <mvc:annotation-driven />	
         
+  	<mvc:interceptors>
+ 		<bean class="com.mc.controller.DayOfWeekInterceptor" />
+ 		<mvc:interceptor>
+ 			<mvc:mapping path="/admissionForm.html" />
+ 			<bean class="com.mc.controller.DayOfWeekInterceptor" />
+ 		</mvc:interceptor>
+  	</mvc:interceptors>   
+  	  
+        
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
           p:prefix="/WEB-INF/view/"

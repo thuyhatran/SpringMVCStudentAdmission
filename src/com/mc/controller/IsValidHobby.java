@@ -20,8 +20,8 @@ public @interface IsValidHobby {
 	    String message() default "Please provide a valid Hobby; " +
 	    		"accepted hobbies are - Music, Football, Cricket and Hockey ( choose anyone )";
 	      
-	   /* Class<?>[] groups() default {};
+	    Class<?>[] groups() default {};
 	      
-	    Class<? extends Payload>[] payload() default {};*/
+	    Class<? extends Payload>[] payload() default {};
 
 }

@@ -13,10 +13,6 @@
 	
 <%-- 	<form:errors path="student.*"/> --%>
 
-	
-	
-	
-	
 	<form  method="post"  action="/SpringMVCStudentAdmission/submitAdmissionForm.html">
 			
 		Student's Name: <input type = "text" name="name" /> 
